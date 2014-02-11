@@ -1,0 +1,21 @@
+{
+	"name": "jasmine-nodal",
+	"version": "1.0.0",
+	"description": "jasmine 2 for Node.js",
+
+	"author": "StreetStrider <teamfortresslife@gmail.com>",
+	"license": "MIT",
+	"private": true,
+
+	"keywords": [ "jasmine", "jasmine-core", "jasmine-2", "node", "jasmine-node", "tdd", "cli" ],
+
+	"homepage":                           "https://github.com/StreetStrider/jasmine-nodal",
+	"repository": { "type": "git", "url": "https://github.com/StreetStrider/jasmine-nodal.git" },
+	"bugs": {                      "url": "https://github.com/StreetStrider/jasmine-nodal/issues" },
+
+	"main": "src/",
+	"dependencies":
+	{
+		"jasmine-core": "~2.0.0"
+	}
+}
