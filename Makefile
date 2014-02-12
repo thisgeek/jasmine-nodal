@@ -2,4 +2,4 @@
 
 
 example:
-	node src/jasmine-bin.js
+	./src/jasmine-bin.js examples/test-spec.js

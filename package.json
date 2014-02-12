@@ -14,6 +14,7 @@
 	"bugs": {                      "url": "https://github.com/StreetStrider/jasmine-nodal/issues" },
 
 	"main": "src/",
+	"bin": "src/jasmine-bin.js",
 	"dependencies":
 	{
 		"jasmine-core": "~2.0.0"

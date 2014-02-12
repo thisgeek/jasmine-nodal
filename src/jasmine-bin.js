@@ -1,19 +1,28 @@
-// the require("mod_jasmine") loads boot.js
-var mj = require("./jasmine"),
-jasmine = mj.jasmine;
-// extending jasmineInterface funcs (describe(), it() ) onto global var
+#! /usr/bin/env node
+
+var
+	path = require('path'),
+	modules = process.argv.slice(2);
+
+var
+	mj = require("./jasmine"),
+	jasmine = mj.jasmine;
+
 mj.extend(global, mj.jasmineInterface);
-// load in specs
-require("./../examples/test-spec.js");
-// require("jasmine/spec/PlayerSpec.ds");
- 
-var jasmineEnv = jasmine.getEnv(),
-consoleReporter = new jasmine.ConsoleReporter({
-// print: function(str){output += str;},
-print: console.log,
-timer: new jasmine.Timer()
+
+modules.forEach(function (module)
+{
+	module = path.resolve(module);
+	require(module);
 });
- 
-// run tests
+
+var
+	jasmineEnv = jasmine.getEnv(),
+	consoleReporter = new jasmine.ConsoleReporter(
+	{
+		print: console.log,
+		timer: new jasmine.Timer()
+	});
+
 jasmineEnv.addReporter(consoleReporter);
 jasmineEnv.execute();
