@@ -20,6 +20,7 @@ var
 	jasmineEnv = jasmine.getEnv(),
 	consoleReporter = new jasmine.ConsoleReporter(
 	{
+		showColors: true,
 		print: console.log,
 		timer: new jasmine.Timer()
 	});
