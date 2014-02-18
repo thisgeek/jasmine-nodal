@@ -5,7 +5,6 @@
 
 	"author": "StreetStrider <teamfortresslife@gmail.com>",
 	"license": "MIT",
-	"private": true,
 
 	"keywords": [ "jasmine", "jasmine-core", "jasmine-2", "node", "jasmine-node", "tdd", "cli" ],
 
