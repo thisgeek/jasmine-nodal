@@ -2,13 +2,31 @@
 
 var
 	path = require('path'),
-	modules = process.argv.slice(2);
+	modules = [];
 
 var
 	mj = require("./jasmine"),
 	jasmine = mj.jasmine;
 
 mj.extend(global, mj.jasmineInterface);
+
+var
+	showColors = true,
+	args = process.argv.slice(2);
+
+args.forEach(function(arg)
+{
+	switch (arg) {
+		case '--color':
+			showColors = true;
+			break;
+		case '--noColor':
+			showColors = false;
+			break;
+		default:
+			modules.push(arg);
+	}
+});
 
 modules.forEach(function (module)
 {
@@ -20,7 +38,7 @@ var
 	jasmineEnv = jasmine.getEnv(),
 	consoleReporter = new jasmine.ConsoleReporter(
 	{
-		showColors: true,
+		showColors: showColors,
 		print: console.log,
 		timer: new jasmine.Timer()
 	});
