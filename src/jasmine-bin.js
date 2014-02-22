@@ -2,6 +2,7 @@
 
 var
 	path = require('path'),
+	util = require('util'),
 	modules = [];
 
 var
@@ -39,7 +40,7 @@ var
 	consoleReporter = new jasmine.ConsoleReporter(
 	{
 		showColors: showColors,
-		print: console.log,
+		print: util.print,
 		timer: new jasmine.Timer()
 	});
 
