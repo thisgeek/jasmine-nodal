@@ -10,6 +10,7 @@ var
 	jasmine = mj.jasmine;
 
 mj.extend(global, mj.jasmineInterface);
+global.jasmine = jasmine;
 
 var
 	showColors = true,
